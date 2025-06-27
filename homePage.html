@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <link rel="stylesheet" href="stylesheets.css">
+
 </head>
 <body>
-    <div>
-        <h1>ควย</h1>
+ <div id="wordGuessGame" class="game-container">
+        <h1>TemCum</h1>
+        <p>คำใบ้: <span id="wordHint">กดเริ่มสุ่มเลย</span></p>
+        <div class="input-container">
+            <label for="guessLetter">พิมพ์ตัวอักษร:</label>
+            <input type="text" id="guessLetter" maxlength="1" placeholder="A-Z">
+            <button id="submitGuess" class="action-button" onclick="submitGuess()">เดา</button>
+        </div>
+        <p id="textusedLetters" class="result-text">ตัวอักษรที่ใช้แล้ว: <span id="usedLetters"></span></p>
+        <p id="gameResult" class="result-text">ลองเดาดูสิ!</p>
+        <button id="restartGame" class="action-button" onclick="startGame()">สุ่ม</button>
     </div>
+
+    <script src="TemCum.js"></script>
 </body>
 </html>
